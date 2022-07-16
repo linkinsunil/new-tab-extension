@@ -1,0 +1,27 @@
+.time-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 130px;
+  font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #29274c;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.time-span {
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.date-span {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
