@@ -1,0 +1,17 @@
+.greeting {
+  text-align: center;
+  line-height: 25px;
+}
+
+.greeting-form input {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 35px;
+  caret-color: white;
+  text-align: center;
+  color: white;
+}
