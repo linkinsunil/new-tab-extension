@@ -1,5 +1,6 @@
 import './App.css';
-import Crypto from './Components/Crypto/Crypto';
+import Todo from './Components/Todo/Todo';
+// import Crypto from './Components/Crypto/Crypto';
 // import Weather from './Components/Weather/Weather';
 // import Greeting from './Components/Greeting/Greeting';
 // import Time from './Components/Time/Time';
@@ -9,8 +10,9 @@ function App() {
     <div className='App'>
       {/* <Time />
       <Greeting />
-      <Weather /> */}
-      <Crypto />
+      <Weather />
+      <Crypto /> */}
+      <Todo />
     </div>
   );
 }
