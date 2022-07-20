@@ -1,12 +1,12 @@
 import './Greeting.css';
 import '../Time/Time.css';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Greeting() {
-  const [greetingMessage, setGreetingMessage] = useState('Hi');
+  const [greetingMessage, setGreetingMessage] = useState('');
   const [username, setUsername] = useState('');
-  const [show, setShow] = useState(true);
+  const [showUsername, setShowUsername] = useState(true);
 
   useEffect(() => {
     const item = localStorage.getItem('userName');
@@ -33,26 +33,27 @@ function Greeting() {
     }
   }, []);
 
-  const handleSubmit = e => {
+  const submitUserName = e => {
     e.preventDefault();
-    setShow(true);
+    setShowUsername(true);
   };
 
-  const handleClick = () => {
-    setShow(false);
+  const openNameInput = () => {
+    console.log('openNameInput');
+    setShowUsername(false);
   };
 
   return (
     <div className='time-card greeting'>
       <span>{greetingMessage}</span>
       <br />
-      {show ? (
-        <span className='user-name' onClick={handleClick}>
+      {showUsername ? (
+        <span className='user-name' onClick={openNameInput}>
           {username}
           {username && '!'}
         </span>
       ) : (
-        <form className='greeting-form' onSubmit={handleSubmit}>
+        <form className='greeting-form' onSubmit={submitUserName}>
           <input
             type='text'
             value={username}

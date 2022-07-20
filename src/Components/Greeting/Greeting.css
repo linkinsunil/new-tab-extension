@@ -9,9 +9,13 @@
   padding: 0;
   background: transparent;
   border: none;
-  outline: none;
   font-size: 35px;
-  caret-color: white;
+  caret-color: #fff;
+  outline: none;
   text-align: center;
-  color: white;
+  color: #fff;
+}
+
+.user-name {
+  font-weight: bold;
 }
