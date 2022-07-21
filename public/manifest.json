@@ -1,8 +1,29 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "manifest_version": 3,
+  "name": "React Chrome Extension",
+  "version": "0.1",
+  "description": "React based Chrome Extension using Google's Manifest v3",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["tabs"],
+  "author": "linkinsunil",
+  "homepage_url": "https://github.com/linkinsunil/",
+  "short_name": "React Extension",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "React Chrome Extension",
+    "default_icon": {
+      "16": "/images/react-logo-16.png",
+      "32": "/images/react-logo-32.png",
+      "48": "/images/react-logo-48.png",
+      "128": "/images/react-logo-128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/react-logo-16.png",
+    "32": "/images/react-logo-32.png",
+    "48": "/images/react-logo-48.png",
+    "128": "/images/react-logo-128.png"
+  }
 }
