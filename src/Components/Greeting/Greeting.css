@@ -13,9 +13,13 @@
   caret-color: #fff;
   outline: none;
   text-align: center;
-  color: #fff;
+  color: rgb(90, 90, 90);
 }
 
 .user-name {
   font-weight: bold;
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
 }

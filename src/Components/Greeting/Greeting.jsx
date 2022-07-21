@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 function Greeting() {
   const [greetingMessage, setGreetingMessage] = useState('');
   const [username, setUsername] = useState('');
-  const [showUsername, setShowUsername] = useState(true);
+  const [showUsername, setShowUsername] = useState(false);
 
   useEffect(() => {
     const item = localStorage.getItem('userName');

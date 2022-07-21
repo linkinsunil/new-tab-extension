@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Weather.css';
 
 function Weather() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState('');
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState('Enter city name');
   const [loadingWeather, setLoadingWeather] = useState(false);
   const [showbar, setShowbar] = useState(false);
 
@@ -36,7 +36,6 @@ function Weather() {
         console.log(data);
       } catch (err) {
         console.log('⛔', err);
-        setMessage('⛔', err.message);
       }
     } else {
       setMessage('Enter a valid city name');
@@ -61,6 +60,19 @@ function Weather() {
     setShowbar(false);
   };
 
+  useEffect(() => {
+    const json = localStorage.getItem('weather');
+    const loadedWeather = JSON.parse(json);
+    if (loadedWeather) {
+      setWeather(loadedWeather);
+    }
+  }, []);
+
+  useEffect(() => {
+    const json = JSON.stringify(weather);
+    localStorage.setItem('weather', json);
+  }, [weather]);
+
   return (
     <div
       className={`weather ${
@@ -79,7 +91,7 @@ function Weather() {
           />
         </form>
         <button className='btn-close' onClick={closeSearchBox}>
-          X
+          ×
         </button>
       </div>
       <button
@@ -111,7 +123,7 @@ function Weather() {
           {loadingWeather ? (
             <h3 className='clean-search'>Loading data ... </h3>
           ) : (
-            <h3 className='clean-search'>Enter city name</h3>
+            <h3 className='clean-search'>{message}</h3>
           )}
         </div>
       )}

@@ -37,7 +37,7 @@ function BookmarkForm({ addBookmark, closeForm }) {
           </div>
 
           <div className='form-control'>
-            <label htmlFor=''>URL</label>
+            <label htmlFor=''>URL (include https://)</label>
             <input
               id='bmLink'
               type='text'

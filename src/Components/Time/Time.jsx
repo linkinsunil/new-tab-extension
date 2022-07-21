@@ -38,7 +38,7 @@ function Time() {
   setInterval(() => getDateTime(getTime, getDate, true), 1000);
 
   return (
-    <div className='time-card'>
+    <div className='time-card glass-effect'>
       <span className='time-span'>{currTime && getTime()}</span>
       <span className='date-span'>{currTime && getDate(true)}</span>
     </div>
